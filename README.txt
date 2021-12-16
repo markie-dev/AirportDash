@@ -1,7 +1,7 @@
 Project 2
 
-To compile the program, type "g++ *.cpp"
+To compile the program, type "make"
 
-To run the program, type "./a.out"
+To run the program, type "./airportDash"
 
 
