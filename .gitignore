@@ -1,0 +1,7 @@
+a.out
+.DS_Store
+.vscode/c_cpp_properties.json
+.vscode/settings.json
+*.o
+airportDash
+data_out/DATA*

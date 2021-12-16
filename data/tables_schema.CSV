@@ -1,0 +1,12 @@
+table_name,column1,column2,column3,column4,column5,column6,column7,column8
+Plane,ID:k:int,Maker::str,Model::str,LastMaint::str,LastMaintA::str,,,
+PlaneType,Maker:k:str,Model:k:str,FlyingSpeed::int,GroundSpeed::int,,,,
+FlightLeg,FLNO:k:str,Seq:k:str,FromA::str,ToA::str,DeptTime::str,ArrTime::str,Plane::str,
+PlaneSeats,Maker:k:str,Model:k:str,SeatType:k:str,NoOfSeats::int,,,,
+FlightLegInstance,Seq:k:str,FLNO::k:str,Fdate:k:str,ActDept::str,ActArr::str,Pilot::str,,
+Airport,Code:k:int,City::str,State::str,,,,,
+Pilot,ID:k:int,Name::str,DateHired::str,,,,,
+FlightInstance,FLNO:k:str,FDate:k:str,,,,,,
+Reservation,PassID:k:str,FLNO:k:str,FDate:k:str,FromA::str,ToA::str,SeatClass::str,DateBooked::str,DateCancelled::str
+Passenger,ID:k:int,Name::str,Phone::str,,,,,
+Flight,FLNO:k:str,Meal::str,Smoking::str,,,,,

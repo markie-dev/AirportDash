@@ -1,0 +1,59 @@
+DATA_Plane.CSV			Plane
+DATA_PlaneType.CSV		PlaneType
+DATA_FlightLeg.CSV		FlightLeg
+DATA_PlaneSeats.CSV		PlaneSeats
+DATA_FlightLegInstance.CSV	FlightLegInstance
+DATA_AirPort.CSV		Airport
+DATA_Pilot.CSV			Pilot
+DATA_FlightInstance.CSV		FlightInstance
+DATA_Reservation.CSV		Reservation
+DATA_Passenger.CSV		Passenger
+DATA_Flight.CSV     		Flight
+
+DISPLAY()
+
+INSERT((AIRBUS,A340,295,137),PlaneType)
+INSERT((1050,Meal,N),Flight)
+INSERT((2,1050,10/5/2021,1/1/2021 19:20,1/1/2002 20:40,8.0),FlightLegInstance)
+INSERT((SEA,Seattle, WA),AirPort)
+INSERT((10,Jack,5/2/1990),Pilot)
+INSERT((AIRBUS,A340,F,95),PlaneSeats)
+INSERT((AIRBUS,A340,E,200),PlaneSeats)
+INSERT((10,AIRBUS,A340,09/04/2021,SEA),Plane)
+INSERT((11,1050,10/6/2021,LAX,SEA,E,9/7/2021,)Reservation)
+INSERT((12,Jean,(817)222-5555),Passenger)
+INSERT((1050,10/7/2021),FlightInstance)
+INSERT((1050,1,LAX,SEA,1/1/2021 15:30,1/1/2001 21:00,10),FlightLeg)
+
+UPDATE((AIRBUS,A340,295,137),PlaneType)
+UPDATE((1050,Meal,N),Flight)
+UPDATE((2,1050,10/5/2021,1/1/2021 19:20,1/1/2002 20:40,8.0),FlightLegInstance)
+UPDATE((SEA,Seattle, WA),AirPort)
+UPDATE((10,Brian,5/2/1990),Pilot)
+UPDATE((AIRBUS,A340,F,195),PlaneSeats)
+UPDATE((AIRBUS,A340,E,100),PlaneSeats)
+UPDATE((10,AIRBUS,A340,09/04/2021,SEA),Plane)
+UPDATE((11,1050,10/6/2021,LAX,SEA,F,9/7/2021,9/8/2021),Reservation)
+UPDATE((12,Jean,(817)000-6767),Passenger)
+UPDATE((1050,10/8/2021),FlightInstance)
+UPDATE((1050,1,LAX,SEA,1/1/2021 15:30,1/1/2021 21:00,10),FlightLeg)
+
+DELETE((AIRBUS,A340,295,137),PlaneType)
+DELETE((1050,Meal,N),Flight)
+DELETE((2,1050,10/5/2021,1/1/2021 19:20,1/1/2002 20:40,8.0),FlightLegInstance)
+DELETE((SEA,Seattle, WA),AirPort)
+DELETE((10,Brian,5/2/1990),Pilot)
+DELETE((AIRBUS,*,F,*),PlaneSeats)
+DELETE((AIRBUS,A340,E,100),PlaneSeats)
+DELETE((10,AIRBUS,A340,09/04/2021,SEA),Plane)
+DELETE((11,1050,10/6/2021,LAX,SEA,F,9/7/2021,9/8/2021),Reservation)
+DELETE((12,Jean,(817)000-6767),Passenger)
+DELETE((1050,10/8/2021),FlightInstance)
+DELETE((1050,1,LAX,SEA,1/1/2021 15:30,1/1/2021 21:00,10),FlightLeg)
+
+SELECT((*.*),Pilot),Jones) 
+SELECT((*.*),Reservation),DFW) 
+SELECT((*.*),FlightInstance),1010) 
+
+DISPLAY()
+WRITE()
